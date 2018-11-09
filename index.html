@@ -1,17 +1,13 @@
-<!-- include A-Frame obviously -->
-<script src="assets/aframe-ar.min.js"></script>
-<!-- include ar.js for A-Frame -->
-<script src="assets/aframe-ar.js"></script>
-<body style="margin : 0px; overflow: hidden;">
-  <a-scene embedded arjs>
-    <a-assets>
-      <a-asset-item id="test-obj" src="assets/mesh.obj"></a-asset-item>
-      
-    </a-assets>
-    <!-- create your content here. just a box for now -->
-    <a-entity mixin="giant" scale="0.08 0.08 0.08" obj-model="obj: #test-obj"></a-entity>
-    
-    <a-marker-camera preset="custom" type="pattern" url="AR_js_demo.patt"></a-marker-camera>
-    
-  </a-scene>
-</body>
+<!doctype HTML>
+<html>
+<script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+<script src="assets/aframe-ar.js"> </script>
+  <body style='margin : 0px; overflow: hidden;'>
+    <a-scene embedded arjs>
+  	<a-marker preset="hiro">
+            <a-box position='0 0.5 0' material='color: black;'></a-box>
+  	</a-marker>
+  	<a-marker-camera preset='custom' type='pattern' url='test_mark.patt'></a-marker-camera>
+    </a-scene>
+  </body>
+</html>
